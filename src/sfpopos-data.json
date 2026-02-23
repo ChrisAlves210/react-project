@@ -1,0 +1,62 @@
+[
+  {
+    "title": "50 California Street",
+    "desc": "Plaza space with seating tucked among the Financial District towers.",
+    "hours": "9am – 5pm",
+    "address": "50 California St.",
+    "geo": { "lat": 0, "lon": 0 },
+    "images": ["50-california-st.jpg"],
+    "website": "",
+    "features": ["outdoors"]
+  },
+  {
+    "title": "100 Pine Street",
+    "desc": "Small urban open space near offices, good for a quick break.",
+    "hours": "9am – 5pm",
+    "address": "100 Pine St.",
+    "geo": { "lat": 0, "lon": 0 },
+    "images": ["100-pine-st.jpg"],
+    "website": "",
+    "features": ["outdoors"]
+  },
+  {
+    "title": "101 California Street",
+    "desc": "Lively plaza with landscaping and seating at the base of the tower.",
+    "hours": "9am – 6pm",
+    "address": "101 California St.",
+    "geo": { "lat": 0, "lon": 0 },
+    "images": ["101-california-st.jpg"],
+    "website": "",
+    "features": ["outdoors", "food"]
+  },
+  {
+    "title": "343 Sansome Roof Garden",
+    "desc": "Rooftop garden with city views and plenty of tables.",
+    "hours": "10am – 5pm",
+    "address": "343 Sansome St.",
+    "geo": { "lat": 0, "lon": 0 },
+    "images": ["343-sansome-roof-garden.jpg"],
+    "website": "",
+    "features": ["outdoors", "views"]
+  },
+  {
+    "title": "525 Market Street Plaza",
+    "desc": "Sunken plaza with trees and seating just off Market Street.",
+    "hours": "9am – 5pm",
+    "address": "525 Market St.",
+    "geo": { "lat": 0, "lon": 0 },
+    "images": ["525-market-street-plaza.jpg"],
+    "website": "",
+    "features": ["outdoors"]
+  },
+  {
+    "title": "Citigroup Center Plaza",
+    "desc": "Large plaza with seating areas and access to nearby shops.",
+    "hours": "9am – 5pm",
+    "address": "1 Sansome St.",
+    "geo": { "lat": 0, "lon": 0 },
+    "images": ["citigroup-center-plaza.jpg"],
+    "website": "",
+    "features": ["outdoors", "shops"]
+  }
+]

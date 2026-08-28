@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">SFPOPOS placeholder</title>
+  <desc id="desc">A placeholder image for a public open space.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d9ead3"/>
+      <stop offset="100%" stop-color="#7fbf9c"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <rect x="0" y="420" width="600" height="180" fill="#8fbc7d"/>
+  <circle cx="150" cy="150" r="70" fill="#f7d58a" opacity="0.9"/>
+  <rect x="250" y="230" width="220" height="190" rx="8" fill="#dfe8db" opacity="0.8"/>
+  <rect x="270" y="255" width="180" height="16" fill="#7aa374" opacity="0.8"/>
+  <rect x="270" y="290" width="160" height="16" fill="#7aa374" opacity="0.8"/>
+  <rect x="270" y="325" width="170" height="16" fill="#7aa374" opacity="0.8"/>
+  <path d="M70 420 L160 290 L220 420 Z" fill="#5e7d53" opacity="0.8"/>
+  <path d="M330 420 L420 305 L500 420 Z" fill="#4f6f4a" opacity="0.8"/>
+  <text x="300" y="540" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" fill="#214833" font-weight="700">SFPOPOS</text>
+</svg>

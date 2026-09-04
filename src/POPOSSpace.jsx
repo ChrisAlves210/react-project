@@ -6,19 +6,23 @@ function POPOSSpace(props) {
 
   return (
     <div className="POPOSSpace">
-      <img
-        src={imageSource}
-        width="300"
-        height="300"
-        alt={name}
-        onError={(event) => {
-          event.currentTarget.onerror = null
-          event.currentTarget.src = '/images/placeholder.svg'
-        }}
-      />
-      <h1>{name}</h1>
-      <div>{address}</div>
-      {hours && <div className="POPOSSpace-hours">Hours: {hours}</div>}
+      <div className="POPOSDetails">
+        <img
+          src={imageSource}
+          width="300"
+          height="300"
+          alt={name}
+          onError={(event) => {
+            event.currentTarget.onerror = null
+            event.currentTarget.src = '/images/placeholder.svg'
+          }}
+        />
+        <div className="POPOSInfo">
+          <h1>{name}</h1>
+          <div>{address}</div>
+          {hours && <div className="POPOSSpace-hours">Hours: {hours}</div>}
+        </div>
+      </div>
     </div>
   )
 }

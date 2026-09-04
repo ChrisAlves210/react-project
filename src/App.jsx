@@ -31,19 +31,25 @@ function AboutPage() {
 function App() {
   return (
     <BrowserRouter>
-      <nav className="MainNav">
-        <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-          Home
-        </NavLink>
-        <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-          About
-        </NavLink>
-      </nav>
+      <div className="AppShell">
+        <nav className="MainNav">
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+            Home
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+            About
+          </NavLink>
+        </nav>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+        <main className="AppContent">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </main>
+
+        <footer className="SiteFooter">SFPOPOS</footer>
+      </div>
     </BrowserRouter>
   )
 }

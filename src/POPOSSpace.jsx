@@ -11,6 +11,10 @@ function POPOSSpace(props) {
         width="300"
         height="300"
         alt={name}
+        onError={(event) => {
+          event.currentTarget.onerror = null
+          event.currentTarget.src = '/images/placeholder.svg'
+        }}
       />
       <h1>{name}</h1>
       <div>{address}</div>

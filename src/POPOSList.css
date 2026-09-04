@@ -2,9 +2,17 @@
 .POPOSList {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-/* Desktop — three columns */
+/* Tablet and up — two columns */
+@media (min-width: 768px) {
+  .POPOSList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop and up — three columns */
 @media (min-width: 1024px) {
   .POPOSList {
     grid-template-columns: 1fr 1fr 1fr;

@@ -5,14 +5,13 @@
 
 .POPOSDetails {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* mobile: stacked */
   gap: 1rem;
 }
 
-.POPOSDetails > img {
-  width: 100%;
-  height: auto;
-}
+/* Mobile: info first (above the fold), image below */
+.POPOSDetails-image { order: 2; }
+.POPOSInfo { order: 1; }
 
 .POPOSSpace-hours {
   font-style: italic;
@@ -22,13 +21,23 @@
 
 @media (min-width: 768px) {
   .POPOSDetails {
-    flex-direction: row;
+    flex-direction: row; /* desktop: side by side */
     align-items: center;
     text-align: left;
   }
 
-  .POPOSDetails > img,
+  /* Desktop: restore HTML order — image left, info right */
+  .POPOSDetails-image { order: 1; }
+  .POPOSInfo { order: 2; }
+
+  .POPOSDetails-image,
   .POPOSInfo {
     width: calc(50% - 0.5rem);
+  }
+
+  /* fixed-height container, cropped without distortion */
+  .POPOSDetails-image {
+    height: 300px;
+    object-fit: cover;
   }
 }

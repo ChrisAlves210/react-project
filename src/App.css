@@ -14,27 +14,7 @@
 }
 
 .AppContent {
-  flex: 1;
-}
-
-.MainNav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0 2rem;
-}
-
-.nav-link {
-  color: #1f2937;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-}
-
-.nav-link.active {
-  background: #c02d1a;
-  color: white;
+  flex: 1 0 auto; /* grows to fill space, pushes footer down */
 }
 
 .AboutPage {
@@ -50,6 +30,7 @@
 }
 
 .SiteFooter {
+  flex-shrink: 0; /* never shrinks — sticky footer */
   margin-top: 2rem;
   padding: 1rem 0 0;
   border-top: 1px solid currentColor;

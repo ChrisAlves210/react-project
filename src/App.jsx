@@ -1,15 +1,10 @@
 import './App.css'
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Title from './Title.jsx'
 import POPOSList from './POPOSList.jsx'
 
 function HomePage() {
-  return (
-    <>
-      <Title />
-      <POPOSList />
-    </>
-  )
+  return <POPOSList />
 }
 
 function AboutPage() {
@@ -32,14 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="AppShell">
-        <nav className="MainNav">
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-            Home
-          </NavLink>
-          <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-            About
-          </NavLink>
-        </nav>
+        <Title />
 
         <main className="AppContent">
           <Routes>

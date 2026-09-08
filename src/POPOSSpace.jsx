@@ -8,6 +8,7 @@ function POPOSSpace(props) {
     <div className="POPOSSpace">
       <div className="POPOSDetails">
         <img
+          className="POPOSDetails-image"
           src={imageSource}
           width="300"
           height="300"

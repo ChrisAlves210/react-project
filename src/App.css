@@ -18,15 +18,49 @@
 }
 
 .AboutPage {
-  max-width: 700px;
+  display: grid;
+  grid-template-areas:
+    "main"
+    "sidebar";
+  gap: 2rem;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
   text-align: left;
   line-height: 1.6;
 }
 
-.AboutPage h1 {
+.AboutMain {
+  grid-area: main;
+}
+
+.AboutSidebar {
+  grid-area: sidebar;
+  border-top: 1px solid currentColor;
+  padding-top: 1rem;
+}
+
+.AboutMain h1 {
   margin-bottom: 1rem;
+}
+
+.AboutSidebar h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .AboutPage {
+    grid-template-areas: "main sidebar";
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    align-items: start;
+  }
+
+  .AboutSidebar {
+    border-top: 0;
+    border-left: 1px solid currentColor;
+    padding-top: 0;
+    padding-left: 2rem;
+  }
 }
 
 .SiteFooter {

@@ -4,14 +4,20 @@
 }
 
 .POPOSDetails {
-  display: flex;
-  flex-direction: column; /* mobile: stacked */
+  display: grid;
+  grid-template-areas:
+    "info"
+    "image";
   gap: 1rem;
 }
 
-/* Mobile: info first (above the fold), image below */
-.POPOSDetails-image { order: 2; }
-.POPOSInfo { order: 1; }
+.POPOSDetails-image { grid-area: image; }
+.POPOSInfo { grid-area: info; }
+
+.POPOSInfo h1 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
 
 .POPOSSpace-hours {
   font-style: italic;
@@ -21,22 +27,15 @@
 
 @media (min-width: 768px) {
   .POPOSDetails {
-    flex-direction: row; /* desktop: side by side */
+    grid-template-areas: "image info";
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
     text-align: left;
   }
 
-  /* Desktop: restore HTML order — image left, info right */
-  .POPOSDetails-image { order: 1; }
-  .POPOSInfo { order: 2; }
-
-  .POPOSDetails-image,
-  .POPOSInfo {
-    width: calc(50% - 0.5rem);
-  }
-
   /* fixed-height container, cropped without distortion */
   .POPOSDetails-image {
+    width: 100%;
     height: 300px;
     object-fit: cover;
   }

@@ -10,15 +10,24 @@ function HomePage() {
 function AboutPage() {
   return (
     <div className="AboutPage">
-      <h1>About SFPOPOS</h1>
-      <p>
-        SFPOPOS highlights the public open spaces that San Francisco creates for
-        residents and visitors to enjoy.
-      </p>
-      <p>
-        These spaces offer places to rest, gather, eat, and experience the city
-        outdoors.
-      </p>
+      <article className="AboutMain">
+        <h1>About SFPOPOS</h1>
+        <p>
+          SFPOPOS highlights the public open spaces that San Francisco creates for
+          residents and visitors to enjoy.
+        </p>
+        <p>
+          These spaces offer places to rest, gather, eat, and experience the city
+          outdoors.
+        </p>
+      </article>
+      <aside className="AboutSidebar">
+        <h2>Public open spaces</h2>
+        <p>
+          Browse plazas, gardens, terraces, and other places to pause in the
+          middle of the city.
+        </p>
+      </aside>
     </div>
   )
 }

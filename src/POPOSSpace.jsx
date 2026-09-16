@@ -1,30 +1,33 @@
 import './POPOSSpace.css'
 
 function POPOSSpace(props) {
-  const { name, image, address, hours } = props
+  const { name, image, address, description, hours } = props
   const imageSource = image ? `/images/${image}` : '/images/placeholder.svg'
+  const altText = description
+    ? `${name} at ${address}: ${description}`
+    : `${name} at ${address}, a public open space in San Francisco.`
 
   return (
-    <div className="POPOSSpace">
-      <div className="POPOSDetails">
+    <article className="POPOSSpace">
+      <figure className="POPOSDetails">
         <img
           className="POPOSDetails-image"
           src={imageSource}
           width="300"
           height="300"
-          alt={name}
+          alt={altText}
           onError={(event) => {
             event.currentTarget.onerror = null
             event.currentTarget.src = '/images/placeholder.svg'
           }}
         />
-        <div className="POPOSInfo">
-          <h1>{name}</h1>
-          <div>{address}</div>
-          {hours && <div className="POPOSSpace-hours">Hours: {hours}</div>}
-        </div>
-      </div>
-    </div>
+        <figcaption className="POPOSInfo">
+          <h2>{name}</h2>
+          <p className="POPOSAddress">{address}</p>
+          {hours && <p className="POPOSSpace-hours">Hours: {hours}</p>}
+        </figcaption>
+      </figure>
+    </article>
   )
 }
 

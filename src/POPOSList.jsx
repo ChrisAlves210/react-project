@@ -3,19 +3,25 @@ import './POPOSList.css'
 import data from './sfpopos-data.json'
 
 function POPOSList() {
-  const spaces = data.map(({ title, address, images, hours }) => {
+  const spaces = data.map(({ title, address, desc, images, hours }) => {
     return (
-      <POPOSSpace
-        key={title}
-        name={title}
-        address={address}
-        image={images[0]}
-        hours={hours}
-      />
+      <li key={title} className="POPOSListItem">
+        <POPOSSpace
+          name={title}
+          address={address}
+          description={desc}
+          image={images[0]}
+          hours={hours}
+        />
+      </li>
     )
   })
 
-  return <div className="POPOSList">{spaces}</div>
+  return (
+    <section aria-label="San Francisco POPOS list">
+      <ul className="POPOSList">{spaces}</ul>
+    </section>
+  )
 }
 
 export default POPOSList

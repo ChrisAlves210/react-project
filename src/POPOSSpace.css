@@ -9,20 +9,26 @@
     "info"
     "image";
   gap: 1rem;
+  margin: 0;
 }
 
 .POPOSDetails-image { grid-area: image; }
 .POPOSInfo { grid-area: info; }
 
-.POPOSInfo h1 {
+.POPOSInfo h2 {
   font-size: 1.5rem;
   line-height: 1.1;
+  margin: 0;
+}
+
+.POPOSAddress,
+.POPOSSpace-hours {
+  margin: 0.35rem 0 0;
 }
 
 .POPOSSpace-hours {
   font-style: italic;
   font-size: 0.9rem;
-  margin-top: 0.25rem;
 }
 
 @media (min-width: 768px) {

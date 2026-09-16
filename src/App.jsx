@@ -9,9 +9,9 @@ function HomePage() {
 
 function AboutPage() {
   return (
-    <div className="AboutPage">
+    <section className="AboutPage" aria-labelledby="about-title">
       <article className="AboutMain">
-        <h1>About SFPOPOS</h1>
+        <h1 id="about-title">About SFPOPOS</h1>
         <p>
           SFPOPOS highlights the public open spaces that San Francisco creates for
           residents and visitors to enjoy.
@@ -28,17 +28,21 @@ function AboutPage() {
           middle of the city.
         </p>
       </aside>
-    </div>
+    </section>
   )
 }
 
 function App() {
   return (
     <BrowserRouter>
+      <a href="#main-content" className="SkipLink">
+        Skip to main content
+      </a>
+
       <div className="AppShell">
         <Title />
 
-        <main className="AppContent">
+        <main id="main-content" className="AppContent" tabIndex="-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

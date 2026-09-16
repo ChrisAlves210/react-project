@@ -23,11 +23,28 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.NavToggle {
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #fff;
+}
+
+.NavToggle:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
 .MainNav {
-  display: flex;
+  display: none;
   flex-direction: column; /* mobile: links stacked */
   align-items: center;
   gap: 0.5rem;
+}
+
+.MainNav.is-open {
+  display: flex;
 }
 
 .nav-link {
@@ -36,6 +53,13 @@
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 999px;
+}
+
+.nav-link:focus-visible,
+.SkipLink:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link.active {
@@ -55,7 +79,12 @@
   }
 
   .MainNav {
+    display: flex;
     flex-direction: row; /* desktop: links horizontal */
     gap: 1rem;
+  }
+
+  .NavToggle {
+    display: none;
   }
 }

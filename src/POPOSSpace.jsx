@@ -1,4 +1,5 @@
 import './POPOSSpace.css'
+import { Link } from 'react-router-dom'
 
 function POPOSSpace(props) {
   const { name, image, address, description, hours } = props
@@ -24,6 +25,10 @@ function POPOSSpace(props) {
         <figcaption className="POPOSInfo">
           <h2>{name}</h2>
           <p className="POPOSAddress">{address}</p>
+          {description && <p className="POPOSDescription">{description}</p>}
+          <Link className="POPOSAboutLink" to={`/spaces/${encodeURIComponent(name)}`}>
+            About this space
+          </Link>
           {hours && <p className="POPOSSpace-hours">Hours: {hours}</p>}
         </figcaption>
       </figure>

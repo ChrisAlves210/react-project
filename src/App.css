@@ -34,6 +34,32 @@
   flex: 1 0 auto; /* grows to fill space, pushes footer down */
 }
 
+.SpacePage {
+  display: grid;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.SpacePage-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.SpacePage-content h1 {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .SpacePage {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
 .AboutPage {
   display: grid;
   grid-template-areas:

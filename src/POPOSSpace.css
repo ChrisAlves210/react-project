@@ -22,8 +22,19 @@
 }
 
 .POPOSAddress,
+.POPOSDescription,
 .POPOSSpace-hours {
   margin: 0.35rem 0 0;
+}
+
+.POPOSDescription {
+  line-height: 1.4;
+}
+
+.POPOSAboutLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 700;
 }
 
 .POPOSSpace-hours {

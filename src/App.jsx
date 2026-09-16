@@ -2,6 +2,8 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Title from './Title.jsx'
 import POPOSList from './POPOSList.jsx'
+import { Link, useParams } from 'react-router-dom'
+import data from './sfpopos-data.json'
 
 function HomePage() {
   return <POPOSList />
@@ -32,6 +34,38 @@ function AboutPage() {
   )
 }
 
+function SpacePage() {
+  const { spaceName } = useParams()
+  const space = data.find(({ title }) => title === spaceName)
+
+  if (!space) {
+    return (
+      <section className="AboutPage" aria-labelledby="space-not-found-title">
+        <h1 id="space-not-found-title">Space not found</h1>
+        <Link to="/">Return to all spaces</Link>
+      </section>
+    )
+  }
+
+  return (
+    <article className="SpacePage" aria-labelledby="space-title">
+      <img
+        className="SpacePage-image"
+        src={`/images/${space.images[0]}`}
+        alt={`${space.title} at ${space.address}`}
+      />
+      <div className="SpacePage-content">
+        <h1 id="space-title">{space.title}</h1>
+        <p className="POPOSAddress">{space.address}</p>
+        <p>{space.desc}</p>
+        <p><strong>Hours:</strong> {space.hours}</p>
+        <p><strong>Features:</strong> {space.features.join(', ')}</p>
+        <Link to="/">Back to all spaces</Link>
+      </div>
+    </article>
+  )
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -46,6 +80,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/spaces/:spaceName" element={<SpacePage />} />
           </Routes>
         </main>
 

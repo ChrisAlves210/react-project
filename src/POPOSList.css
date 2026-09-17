@@ -10,3 +10,10 @@
 .POPOSListItem {
   list-style: none;
 }
+
+@media (min-width: 1024px) {
+  .POPOSList {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+}

@@ -4,16 +4,14 @@
 }
 
 .POPOSDetails {
-  display: grid;
-  grid-template-areas:
-    "info"
-    "image";
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   margin: 0;
 }
 
-.POPOSDetails-image { grid-area: image; }
-.POPOSInfo { grid-area: info; }
+.POPOSDetails-image { order: 2; }
+.POPOSInfo { order: 1; }
 
 .POPOSInfo h2 {
   font-size: 1.5rem;
@@ -44,10 +42,15 @@
 
 @media (min-width: 768px) {
   .POPOSDetails {
-    grid-template-areas: "image info";
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    flex-direction: row;
     align-items: center;
     text-align: left;
+  }
+
+  .POPOSDetails-image { order: 1; }
+  .POPOSInfo {
+    order: 2;
+    flex: 1;
   }
 
   /* fixed-height container, cropped without distortion */

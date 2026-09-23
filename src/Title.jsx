@@ -40,7 +40,7 @@ function Title() {
 
   return (
     <header
-      className="mb-8 flex w-full flex-col items-center gap-4 bg-[rgb(192,45,26)] p-4 text-center text-white-500 md:flex-row md:justify-between md:text-left"
+      className="mb-4 flex w-full flex-col items-center gap-2 bg-[rgb(192,45,26)] p-2 text-center text-white-500 md:flex-row md:justify-between md:text-left"
       ref={headerRef}
     >
       <div>

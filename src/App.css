@@ -19,21 +19,6 @@
   top: 1rem;
 }
 
-.AppShell {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.AppContent {
-  flex: 1 0 auto; /* grows to fill space, pushes footer down */
-}
-
 .SpacePage {
   display: grid;
   grid-template-areas:
@@ -92,14 +77,6 @@
   margin-top: 0;
 }
 
-.SiteFooter {
-  flex-shrink: 0; /* never shrinks — sticky footer */
-  margin-top: 2rem;
-  padding: 1rem 0 0;
-  border-top: 1px solid currentColor;
-  font-size: 0.875rem;
-}
-
 @media (min-width: 768px) {
   .SpacePage {
     grid-template-areas: "image content";
@@ -121,8 +98,3 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .AppShell {
-    padding: 3rem;
-  }
-}

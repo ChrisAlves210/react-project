@@ -1,3 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white-500: #ffffff;
+}
+
 :root {
   font-family: 'Segoe UI', 'Montserrat', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
@@ -77,4 +83,8 @@ button:focus-visible {
     animation: none;
     transition: none;
   }
+}
+
+@theme {
+  --color-white-500: #ffffff;
 }

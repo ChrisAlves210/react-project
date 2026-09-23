@@ -69,14 +69,17 @@ function SpacePage() {
 function App() {
   return (
     <BrowserRouter>
-      <a href="#main-content" className="SkipLink">
+      <a
+        href="#main-content"
+        className="absolute left-4 top-[-3rem] z-10 rounded-lg bg-white px-4 py-3 text-[#1a1a1a] no-underline transition-[top] duration-200 focus:top-4 focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-3"
+      >
         Skip to main content
       </a>
 
-      <div className="AppShell">
+      <div className="mx-auto flex min-h-screen max-w-[1280px] flex-col box-border p-8 text-center">
         <Title />
 
-        <main id="main-content" className="AppContent" tabIndex="-1">
+        <main id="main-content" className="flex-1" tabIndex="-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -84,7 +87,7 @@ function App() {
           </Routes>
         </main>
 
-        <footer className="SiteFooter">SFPOPOS</footer>
+        <footer className="mt-8 shrink-0 border-t border-current pt-4 text-sm">SFPOPOS</footer>
       </div>
     </BrowserRouter>
   )

@@ -23,7 +23,7 @@ function POPOSSpace(props) {
           }}
         />
         <figcaption className="POPOSInfo">
-          <h2>{name}</h2>
+          <h2 className="text-red-500">{name}</h2>
           <p className="POPOSAddress">{address}</p>
           {description && <p className="POPOSDescription">{description}</p>}
           <Link className="POPOSAboutLink" to={`/spaces/${encodeURIComponent(name)}`}>

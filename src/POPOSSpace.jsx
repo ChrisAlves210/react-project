@@ -9,10 +9,10 @@ function POPOSSpace(props) {
     : `${name} at ${address}, a public open space in San Francisco.`
 
   return (
-    <article className="POPOSSpace">
-      <figure className="POPOSDetails">
+    <article className="w-full text-center">
+      <figure className="m-0 flex flex-col items-center justify-center gap-4">
         <img
-          className="POPOSDetails-image"
+          className="order-1 w-full md:h-[300px] md:object-cover"
           src={imageSource}
           width="300"
           height="300"
@@ -22,7 +22,7 @@ function POPOSSpace(props) {
             event.currentTarget.src = '/images/placeholder.svg'
           }}
         />
-        <figcaption className="POPOSInfo">
+        <figcaption className="POPOSInfo order-2 flex flex-col items-center text-center md:w-full md:justify-center">
           <h2 className="text-red-500">{name}</h2>
           <p className="POPOSAddress">{address}</p>
           {description && <p className="POPOSDescription">{description}</p>}

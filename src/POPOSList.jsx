@@ -18,7 +18,7 @@ function POPOSList() {
 
   return (
     <section aria-label="San Francisco POPOS list">
-      <ul className="grid list-none grid-cols-1 gap-4 p-0 lg:grid-cols-3 lg:gap-6">{spaces}</ul>
+      <ul className="grid list-none grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-6 p-0">{spaces}</ul>
     </section>
   )
 }

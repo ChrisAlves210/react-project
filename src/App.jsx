@@ -56,7 +56,7 @@ function SpacePage() {
       />
       <div className="SpacePage-content">
         <h1 id="space-title">{space.title}</h1>
-        <p className="POPOSAddress">{space.address}</p>
+        <p>{space.address}</p>
         <p>{space.desc}</p>
         <p><strong>Hours:</strong> {space.hours}</p>
         <p><strong>Features:</strong> {space.features.join(', ')}</p>

@@ -1,4 +1,3 @@
-import './POPOSSpace.css'
 import { Link } from 'react-router-dom'
 
 function POPOSSpace(props) {
@@ -11,25 +10,28 @@ function POPOSSpace(props) {
   return (
     <article className="w-full text-center">
       <figure className="m-0 flex flex-col items-center justify-center gap-4">
-        <img
-          className="order-1 w-full md:h-[300px] md:object-cover"
-          src={imageSource}
-          width="300"
-          height="300"
-          alt={altText}
-          onError={(event) => {
-            event.currentTarget.onerror = null
-            event.currentTarget.src = '/images/placeholder.svg'
-          }}
-        />
+        <Link
+          className="order-1 block w-full rounded focus-visible:outline focus-visible:outline-3 focus-visible:outline-[#7f1d1d] focus-visible:outline-offset-2"
+          to={`/spaces/${encodeURIComponent(name)}`}
+          aria-label={`View details for ${name}`}
+        >
+          <img
+            className="h-[300px] w-full object-cover"
+            src={imageSource}
+            width="300"
+            height="300"
+            alt={altText}
+            onError={(event) => {
+              event.currentTarget.onerror = null
+              event.currentTarget.src = '/images/placeholder.svg'
+            }}
+          />
+        </Link>
         <figcaption className="POPOSInfo order-2 flex flex-col items-center text-center md:w-full md:justify-center">
-          <h2 className="text-red-500">{name}</h2>
-          <p className="POPOSAddress">{address}</p>
-          {description && <p className="POPOSDescription">{description}</p>}
-          <Link className="POPOSAboutLink" to={`/spaces/${encodeURIComponent(name)}`}>
-            About this space
-          </Link>
-          {hours && <p className="POPOSSpace-hours">Hours: {hours}</p>}
+          <h2 className="m-0 text-2xl leading-tight text-red-500">{name}</h2>
+          <p className="hidden">{address}</p>
+          {description && <p className="mt-[0.35rem] leading-[1.4]">{description}</p>}
+          {hours && <p className="mt-[0.35rem] text-sm italic">Hours: {hours}</p>}
         </figcaption>
       </figure>
     </article>

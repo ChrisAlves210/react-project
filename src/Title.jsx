@@ -105,6 +105,13 @@ function Title() {
         >
           About
         </NavLink>
+        <NavLink
+          to="/submit"
+          className={navLinkClassName}
+          onClick={closeNav}
+        >
+          Submit a space
+        </NavLink>
       </nav>
     </header>
   )

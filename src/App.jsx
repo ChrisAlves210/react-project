@@ -22,6 +22,67 @@ function AboutPage() {
           These spaces offer places to rest, gather, eat, and experience the city
           outdoors.
         </p>
+        <form
+          className="mt-8 flex max-w-lg flex-col gap-6"
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <h2 className="mb-0 text-2xl">Share a space</h2>
+          <div className="flex flex-col gap-4 md:flex-row">
+            <div className="flex flex-1 flex-col gap-1">
+              <label htmlFor="first-name" className="font-medium text-gray-700">
+                First name
+              </label>
+              <input
+                type="text"
+                id="first-name"
+                name="firstName"
+                autoComplete="given-name"
+                className="w-full rounded border border-gray-300 px-3 py-3 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              />
+            </div>
+            <div className="flex flex-1 flex-col gap-1">
+              <label htmlFor="last-name" className="font-medium text-gray-700">
+                Last name
+              </label>
+              <input
+                type="text"
+                id="last-name"
+                name="lastName"
+                autoComplete="family-name"
+                className="w-full rounded border border-gray-300 px-3 py-3 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label htmlFor="email" className="font-medium text-gray-700">
+              Email address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autoComplete="email"
+              className="w-full rounded border border-gray-300 px-3 py-3 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <label htmlFor="message" className="font-medium text-gray-700">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              className="w-full rounded border border-gray-300 px-3 py-3 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full rounded bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-auto md:self-end"
+          >
+            Send message
+          </button>
+        </form>
       </article>
       <aside className="AboutSidebar">
         <h2>Public open spaces</h2>

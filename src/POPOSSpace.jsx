@@ -28,7 +28,7 @@ function POPOSSpace(props) {
           />
         </Link>
         <figcaption className="POPOSInfo order-2 flex flex-col items-center text-center md:w-full md:justify-center">
-          <h2 className="m-0 text-2xl leading-tight text-red-500">{name}</h2>
+          <h2 className="m-0 leading-tight text-red-500">{name}</h2>
           <p className="hidden">{address}</p>
           {description && <p className="mt-[0.35rem] leading-[1.4]">{description}</p>}
           {hours && <p className="mt-[0.35rem] text-sm italic">Hours: {hours}</p>}
